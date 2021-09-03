@@ -18,7 +18,7 @@ for (ii in 1:1000000){
   dummy<-runif(length(dat$Observed))
   rcs[ii]<-cor(dat$Observed,dummy,method="spearman")
 }
-hist(rcs)
+hist(rcs,main="",xlab="Spearman's Rho")
 abline(v=cs,col=2)
 sum(rcs>=cs)/1000000
 # 98% of random gusses show a better correlation to SF at 2 Gy than RSI!!!
